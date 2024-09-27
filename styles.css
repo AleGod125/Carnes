@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilo del iframe para ocupar todo el espacio */
+#contentFrame {
+    height: calc(100% - 50px);
+    /* Ajusta 50px según la altura de tu nav */
+    width: 100%;
+    border: none;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    height: 50px;
+    /* Ajusta según sea necesario */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f8f8;
+    /* Color de fondo de la barra de navegación */
+    border-bottom: 1px solid #ccc;
+    /* Línea inferior */
+}

@@ -1,65 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software de Facturación e Inventario</title>
-    <link rel="stylesheet" href="styles.css">
+  
 </head>
-
 <body>
-
     <nav>
-        <button onclick="showScreen('inicio')">Inicio</button>
-        <button onclick="showScreen('inventario')">Inventario</button>
-        <button onclick="showScreen('facturacion')">Facturación</button>
-        <button onclick="showScreen('tipos_productos')">Tipos de Productos</button>
+        <button onclick="changePage('inicio.html')">Inicio</button>
+        <button onclick="changePage('ui/inventario/inventario.html')">Inventario</button>
+        <button onclick="changePage('facturacion.html')">Facturación</button>
+        <button onclick="changePage('ui/tipo_carne/tipos.html')">Tipos de Productos</button>
     </nav>
 
-    <!-- Different screens -->
-    <div id="screen-inicio" class="screen">
-        <div id="inicio-content"></div>
-    </div>
-    <div id="screen-inventario" class="screen" style="display:none;">
-        <div id="inventario-content"></div>
-    </div>
-    <div id="screen-facturacion" class="screen" style="display:none;">
-        <div id="facturacion-content"></div>
-    </div>
-    <div id="screen-tipos_productos" class="screen" style="display:none;">
-        <div id="tipos_productos-content"></div>
-    </div>
+    <iframe id="contentFrame" src="inicio.html"></iframe>
 
     <script>
-        // Función para cambiar entre pantallas
-        function showScreen(screenName) {
-            document.querySelectorAll('.screen').forEach(screen => {
-                screen.style.display = 'none';
-            });
-            document.getElementById(`screen-${screenName}`).style.display = 'block';
+        function changePage(page) {
+            document.getElementById('contentFrame').src = page;
         }
-
-        // Función para cargar contenido en las pantallas
-        function loadContent(screenId, filePath) {
-            fetch(filePath)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(screenId).innerHTML = data;
-                })
-                .catch(error => console.error('Error loading content:', error));
-        }
-
-        // Cargar todas las pantallas al iniciar la web
-        function loadScreens() {
-            loadContent('inicio-content', 'ui/inicio/inicio.html');
-            loadContent('inventario-content', 'ui/inventario/inventario.html');
-            loadContent('facturacion-content', 'ui/facturacion/facturacion.html');
-            loadContent('tipos_productos-content', 'ui/tipos_productos/tipos_productos.html');
-        }
-
-        window.onload = loadScreens;
     </script>
 </body>
-
 </html>
