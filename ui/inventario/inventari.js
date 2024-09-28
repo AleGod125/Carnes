@@ -35,6 +35,7 @@ listaDatos.forEach(item => {
     container.innerHTML += block;
 });
 
-function Click(tipo){
-    alert("Has hecho clic en: " + tipo);
+function Click(tipo) {
+    window.location.href = `/ui/tipo_carne/tipos.html?tipo=${encodeURIComponent(tipo)}`;
 }
+
