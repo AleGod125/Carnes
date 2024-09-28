@@ -36,6 +36,6 @@ listaDatos.forEach(item => {
 });
 
 function Click(tipo) {
-    window.location.href = `/ui/tipo_carne/tipos.html?tipo=${encodeURIComponent(tipo)}`;
+    window.location.href = `/Carnes/ui/tipo_carne/tipos.html?tipo=${encodeURIComponent(tipo)}`;
 }
 
