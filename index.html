@@ -8,14 +8,15 @@
   
 </head>
 <body>
+    <h1>Carniceria </h1>
     <nav>
-        <button onclick="changePage('inicio.html')">Inicio</button>
-        <button onclick="changePage('ui/inventario/inventario.html')">Inventario</button>
-        <button onclick="changePage('ui/tipo_carne/tipos.html')">Tipos de Productos</button>
-        <button onclick="changePage('facturacion.html')">Facturación</button>
+        <button class="navbtn" onclick="changePage('ui/facturacion/facturacion.html')">Facturacion</button>
+        <button class="navbtn" onclick="changePage('ui/inventario/inventario.html')">Inventario</button>
+        <button class="navbtn" onclick="changePage('ui/tipo_carne/tipos.html')">Reportes</button>
+        <button class="navbtn" onclick="changePage('facturacion.html')">Provedores</button>
     </nav>
 
-    <iframe id="contentFrame" src="inicio.html"></iframe>
+    <iframe id="contentFrame" class="contenido" src="ui/facturacion/facturacion.html"></iframe>
 
     <script>
         function changePage(page) {
