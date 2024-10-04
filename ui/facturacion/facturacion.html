@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="facturacion.css">
     <title>Facturación</title>
 </head>
+
 <body>
-    <div class="input-container">
+    <div class="container">
         <input class="buscador" placeholder="Buscar Código" type="search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
         </svg>
     </div>
 
     <h1>Producto selencioado</h1>
 
-    <div class="x">
-        <p class="text" >nombre</p>
-        <div class="right-section">
-            <p class="text">Cantidad</p>
-            <p class="text">Precio</p>
+    <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="x">
+            <p class="text">Nombre</p>
+            <div class="right-section">
+                <p class="text">Cantidad</p>
+                <p class="text">Precio</p>
+            </div>
+        </div>
+        <div class="x" style="width: 90%;">
+            <p class="text" style="margin-left: 12%;">Nombre</p>
+            <div class="right-section">
+                <input class="c" type="number" name="" id="">
+                <p class="text">Precio</p>
+                <button class="btnElminar">Eliminar</button>
+            </div>
         </div>
     </div>
-    
+
+    <div class="Resumen">
+        <h1 style="margin-bottom: 24px;">Resumen de Compra</h1>
+        <div class="x">
+            <p class="text" style="font-size: 24px;">Subtotal</p>
+            <div class="right-section">
+                <p class="text" style="font-size: 24px;">Precio</p>
+            </div>
+        </div>
+        
+        <div style=" width: 90%;">
+            <p style="margin: 16px; font-weight: bold;">Meotodo de pago</p>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <select class="selectpago" name="" id="">
+                    <option>Efectivo</option>
+                    <option>Tranferencia</option>
+                    <option>Debito/Credito</option>
+                </select>
+
+                <button class="btnpago">Procesar Pago e imprimir recibo</button>
+            </div>
+            
+        </div>
+    </div>
+
+
 </body>
+
 </html>

@@ -1,5 +1,5 @@
-body{
-   
+body {
+
     margin-top: 24px;
     display: flex;
     flex-direction: column;
@@ -9,14 +9,14 @@ body{
 
 }
 
-.buscador{
+.buscador {
     border: 0;
     border-radius: 10px;
     padding: 16px;
     width: 100%;
 }
 
-.input-container {
+.container {
     position: relative;
     display: inline-block;
     width: 70%;
@@ -29,27 +29,73 @@ body{
 .bi-search {
     position: absolute;
     right: 2%;
-    pointer-events: none; 
+    pointer-events: none;
     color: gray;
 }
 
-.x{
+.x {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 70%;
-    justify-content: space-between; 
-
-    background-color: green;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 8px;
 }
 
-.text{
+.text {
     margin: 16px;
     font-weight: bold;
 }
 
 .right-section {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
+}
+
+.c {
+    border: 0;
+    border-radius: 10px;
+    width: 50%;
+    height: 45px;
+    margin-left: 12%;
+}
+
+.btnElminar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 30px;
+    cursor: pointer;
+
+}
+
+.Resumen{
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectpago{
+    border: 0;
+    width: 95%;
+    padding: 16px;
+    border-radius: 10px;
+
+}
+
+.btnpago{
+    margin: 24px;
+    width: 95%;
+    border: 0;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(51, 255, 51);
 }
