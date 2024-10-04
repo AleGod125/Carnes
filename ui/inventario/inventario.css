@@ -1,0 +1,17 @@
+body{
+    background-color: transparent;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+
+.A{
+    margin: 24px;
+    background-color: transparent;
+}
