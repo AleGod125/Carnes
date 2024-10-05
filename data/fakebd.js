@@ -311,4 +311,3 @@ const listaCompra =[]
 
 export default productosCarnes;
 export { carnesDeRes,carnesDePollo,carnesDeCerdo,listaCompra };
-

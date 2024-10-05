@@ -144,3 +144,4 @@ function calcularTotal(listaElementos) {
     }, 0);
 }
 
+

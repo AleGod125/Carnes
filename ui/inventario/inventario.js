@@ -17,6 +17,5 @@ productosCarnes.forEach(producto => {
             </div>
         </div>
     `;
-
     contenedor.innerHTML += cardHTML;
 });
