@@ -307,8 +307,12 @@ const carnesDeCerdo = [
     }
 ];
 
+const listaCompra =[]
+
 export default productosCarnes;
 export { carnesDeRes };
 export { carnesDePollo };
 export { carnesDeCerdo };
+export { listaCompra };
+
 
