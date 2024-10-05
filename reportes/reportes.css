@@ -1,0 +1,25 @@
+body {
+}
+
+.rpt {
+
+    box-sizing: border-box;
+  width: 400px;
+  height: 170px;
+  border-radius: 30px;
+  background: #ac2020;
+  box-shadow: inset 25px 25px 90px #450d0d, inset -25px -25px 90px #ff3333;
+}
+
+
+.ddv{
+
+
+    width: 400px;
+    height: 170px;
+    border-radius: 30px;
+    background: #ac2020;
+    box-shadow: inset 25px 25px 90px #450d0d, inset -25px -25px 90px #ff3333;
+
+
+}
