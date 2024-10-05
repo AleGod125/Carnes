@@ -18,41 +18,54 @@
         </svg>
     </div>
     <div id="suggestions" class="suggestions" style="display: none;"></div>
-      
+
 
     <div style="width: 100%; height: 4px; background-color: black; border-radius: 24px; margin: 24px;"></div>
 
     <h1>Producto selencioado</h1>
 
-    <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <div class="x">
+    <div
+        style="width: 90%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; ">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <p class="text">Nombre</p>
-            <div class="right-section">
-                <p class="text">Cantidad</p>
-                <p class="text">Precio</p>
-            </div>
+            <div class="text" id="names" style="margin: 8px;"></div>
         </div>
-        <div class="x" style="width: 90%;">
-            <p class="text" style="margin-left: 12%;">Nombre</p>
-            <div class="right-section">
-                <input class="c" type="number" name="" id="">
+
+        <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center; height: 100%;">
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
                 <p class="text">Precio</p>
-                <button class="btnElminar">Eliminar</button>
+                <div class="text" id="precio" style="margin: 8px;"></div>
+            </div>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
+                <p class="text">Cantidad Kg</p>
+                <div class="text" id="cantidadContainer"
+                    style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
+            </div>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
+                <p class="text">Cantidad</p>
+                <div class="text" id="btnContainer"
+                    style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
             </div>
         </div>
     </div>
-    
+
+
+
+
     <div style="width: 100%; height: 4px; background-color: black; border-radius: 24px; margin: 24px;"></div>
 
     <div class="Resumen">
         <h1 style="margin-bottom: 24px;">Resumen de Compra</h1>
-        <div class="x">
-            <p class="text" style="font-size: 24px;">Subtotal</p>
-            <div class="right-section">
-                <p class="text" style="font-size: 24px;">Precio</p>
-            </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h2>SubTotal</h2>
+            <h2 id="totalPrecio">Precio</h2>
         </div>
-        
+
         <div style=" width: 90%;">
             <p style="margin: 16px; font-weight: bold;">Meotodo de pago</p>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -64,10 +77,11 @@
 
                 <button class="btnpago">Procesar Pago e imprimir recibo</button>
             </div>
-            
+
         </div>
     </div>
 
     <script type="module" src="faturacion.js"></script>
 </body>
+
 </html>

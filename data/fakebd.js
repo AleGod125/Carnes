@@ -35,7 +35,7 @@ const carnesDeRes = [
         cantidad: 50,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 30000, // precio en pesos colombianos
+        precio: 30000/2, 
         tipo: "Res"
     },
     {
@@ -44,7 +44,7 @@ const carnesDeRes = [
         cantidad: 30,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 35000,
+        precio: 35000/2,
         tipo: "Res"
     },
     {
@@ -53,7 +53,7 @@ const carnesDeRes = [
         cantidad: 20,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 25000,
+        precio: 25000/2,
         tipo: "Res"
     },
     {
@@ -62,7 +62,7 @@ const carnesDeRes = [
         cantidad: 15,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 32000,
+        precio: 32000/2,
         tipo: "Res"
     },
     {
@@ -71,7 +71,7 @@ const carnesDeRes = [
         cantidad: 25,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 27000,
+        precio: 27000/2,
         tipo: "Res"
     },
     {
@@ -80,7 +80,7 @@ const carnesDeRes = [
         cantidad: 35,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 22000,
+        precio: 22000/2,
         tipo: "Res"
     },
     {
@@ -89,7 +89,7 @@ const carnesDeRes = [
         cantidad: 40,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 24000,
+        precio: 24000/2,
         tipo: "Res"
     },
     {
@@ -98,7 +98,7 @@ const carnesDeRes = [
         cantidad: 12,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 38000,
+        precio: 38000/2,
         tipo: "Res"
     },
     {
@@ -107,7 +107,7 @@ const carnesDeRes = [
         cantidad: 45,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 18000,
+        precio: 18000/2,
         tipo: "Res"
     },
     {
@@ -116,7 +116,7 @@ const carnesDeRes = [
         cantidad: 10,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 42000,
+        precio: 42000/2,
         tipo: "Res"
     }
 ];
@@ -128,7 +128,7 @@ const carnesDePollo = [
         cantidad: 50,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 20000, // precio en pesos colombianos
+        precio: 20000/2, // precio en pes/2os colombianos
         tipo: "Pollo"
     },
     {
@@ -137,7 +137,7 @@ const carnesDePollo = [
         cantidad: 40,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 18000,
+        precio: 18000/2,
         tipo: "Pollo"
     },
     {
@@ -146,7 +146,7 @@ const carnesDePollo = [
         cantidad: 30,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 15000,
+        precio: 15000/2,
         tipo: "Pollo"
     },
     {
@@ -155,7 +155,7 @@ const carnesDePollo = [
         cantidad: 25,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 22000,
+        precio: 22000/2,
         tipo: "Pollo"
     },
     {
@@ -164,7 +164,7 @@ const carnesDePollo = [
         cantidad: 20,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 17000,
+        precio: 17000/2,
         tipo: "Pollo"
     },
     {
@@ -173,7 +173,7 @@ const carnesDePollo = [
         cantidad: 15,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 16000,
+        precio: 16000/2,
         tipo: "Pollo"
     },
     {
@@ -182,7 +182,7 @@ const carnesDePollo = [
         cantidad: 35,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 14000,
+        precio: 14000/2,
         tipo: "Pollo"
     },
     {
@@ -191,7 +191,7 @@ const carnesDePollo = [
         cantidad: 10,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 13000,
+        precio: 13000/2,
         tipo: "Pollo"
     },
     {
@@ -200,7 +200,7 @@ const carnesDePollo = [
         cantidad: 5,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 15000,
+        precio: 15000/2,
         tipo: "Pollo"
     },
     {
@@ -209,7 +209,7 @@ const carnesDePollo = [
         cantidad: 12,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 18000,
+        precio: 18000/2,
         tipo: "Pollo"
     }
 ];
@@ -221,7 +221,7 @@ const carnesDeCerdo = [
         cantidad: 50,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 25000,
+        precio: 25000/2,
         tipo: "Cerdo"
     },
     {
@@ -230,7 +230,7 @@ const carnesDeCerdo = [
         cantidad: 40,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 22000,
+        precio: 22000/2,
         tipo: "Cerdo"
     },
     {
@@ -239,7 +239,7 @@ const carnesDeCerdo = [
         cantidad: 30,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 26000,
+        precio: 26000/2,
         tipo: "Cerdo"
     },
     {
@@ -248,7 +248,7 @@ const carnesDeCerdo = [
         cantidad: 25,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 24000,
+        precio: 24000/2,
         tipo: "Cerdo"
     },
     {
@@ -257,7 +257,7 @@ const carnesDeCerdo = [
         cantidad: 20,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 30000,
+        precio: 30000/2,
         tipo: "Cerdo"
     },
     {
@@ -266,7 +266,7 @@ const carnesDeCerdo = [
         cantidad: 15,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 28000,
+        precio: 28000/2,
         tipo: "Cerdo"
     },
     {
@@ -275,7 +275,7 @@ const carnesDeCerdo = [
         cantidad: 35,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 20000,
+        precio: 20000/2,
         tipo: "Cerdo"
     },
     {
@@ -284,7 +284,7 @@ const carnesDeCerdo = [
         cantidad: 10,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 33000,
+        precio: 33000/2,
         tipo: "Cerdo"
     },
     {
@@ -293,7 +293,7 @@ const carnesDeCerdo = [
         cantidad: 5,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 34000,
+        precio: 34000/2,
         tipo: "Cerdo"
     },
     {
@@ -302,7 +302,7 @@ const carnesDeCerdo = [
         cantidad: 12,
         FechaIngreso: fechaIngreso,
         FechaVencimiento: fechaVencimientoFormateada,
-        precio: 18000,
+        precio: 18000/2,
         tipo: "Cerdo"
     }
 ];
@@ -310,9 +310,5 @@ const carnesDeCerdo = [
 const listaCompra =[]
 
 export default productosCarnes;
-export { carnesDeRes };
-export { carnesDePollo };
-export { carnesDeCerdo };
-export { listaCompra };
-
+export { carnesDeRes,carnesDePollo,carnesDeCerdo,listaCompra };
 

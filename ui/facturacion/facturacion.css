@@ -30,25 +30,15 @@ body {
     color: gray;
 }
 
-.x {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    padding: 8px;
-    border-radius: 10px; 
-    margin-bottom: 16px; 
-}
-
 .text {
-    margin: 16px;
-    font-weight: bold;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    font-weight: bolder;
 }
 
-.right-section {
-    display: flex;
-    gap: 20px;
-}
 
 .c {
     border: 0;
@@ -58,12 +48,14 @@ body {
     margin-left: 12%;
 }
 
-.btnElminar {
-    background-color: #f44336; /* Rojo */
+.btnEliminar {
+    background-color: #f44336; 
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 0 30px;
+   padding: 12px;
+   padding-left: 24px;
+   padding-right: 24px;
     cursor: pointer;
 }
 
@@ -123,4 +115,12 @@ body {
 
 .suggestion-item:hover {
     background-color: lightgray; 
+}
+
+.cantidad{
+ border: 0;
+ width: 50%;
+ padding: 8px;
+ border-radius: 5px;
+ justify-content: center;
 }
