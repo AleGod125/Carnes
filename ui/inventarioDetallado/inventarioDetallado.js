@@ -1,4 +1,4 @@
-import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from './data/fakebd.js';
+import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from '/data/fakebd.js';
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
