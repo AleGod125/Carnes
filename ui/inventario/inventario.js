@@ -1,9 +1,9 @@
-import productosCarnes from '/data/fakebd.js';
+import productosCarnes from './data/fakebd.js';
 
 const contenedor = document.getElementById("productos-container");
 
 window.Click = function(tipo) {
-    window.location.href = `/ui/inventarioDetallado/inventarioDetallado.html?tipo=${encodeURIComponent(tipo)}`;
+    window.location.href = `./ui/inventarioDetallado/inventarioDetallado.html?tipo=${encodeURIComponent(tipo)}`;
 };
 
 productosCarnes.forEach(producto => {

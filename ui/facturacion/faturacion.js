@@ -1,5 +1,5 @@
-import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from '/data/fakebd.js';
-import { agregarElemento, eliminarElemento, obtenerListaCompra } from '/domain/listaCompraServide.js';
+import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from './data/fakebd.js';
+import { agregarElemento, eliminarElemento, obtenerListaCompra } from './domain/listaCompraServide.js';
 
 const searchInput = document.getElementById('searchInput');
 const suggestionsContainer = document.getElementById('suggestions');
