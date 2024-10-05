@@ -1,36 +1,27 @@
 body {
 }
 
-
-
-
-section{
-
-    display: inline-flex;
-    justify-content: right;
-    gap: 700px;
-
+section {
+    color: white;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: right;
+  gap: 100px;
+  margin-left: 300px;
 }
-
-
-
-
-
-
 
 .rpt {
   box-sizing: border-box;
   width: 400px;
-  height: 170px;
+  height: 250px;
   border-radius: 30px;
   background: #ac2020;
   box-shadow: inset 25px 25px 90px #450d0d, inset -25px -25px 90px #ff3333;
 }
 
 .ddv {
-
   width: 400px;
-  height: 170px;
+  height: 250px;
   border-radius: 30px;
   background: #ac2020;
   box-shadow: inset 25px 25px 90px #450d0d, inset -25px -25px 90px #ff3333;
