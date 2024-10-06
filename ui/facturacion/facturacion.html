@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./facturacion.css"> <!-- Cambiar a ruta relativa -->
+    <link rel="stylesheet" href="facturacion.css">
     <title>Facturación</title>
 </head>
 
@@ -19,34 +19,40 @@
     </div>
     <div id="suggestions" class="suggestions" style="display: none;"></div>
 
+
     <div style="width: 100%; height: 4px; background-color: black; border-radius: 24px; margin: 24px;"></div>
 
-    <h1>Producto seleccionado</h1>
+    <h1>Producto selencioado</h1>
 
-    <div style="width: 90%; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+    <div
+        style="width: 90%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; ">
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <p class="text">Nombre</p>
             <div class="text" id="names" style="margin: 8px;"></div>
         </div>
 
         <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center; height: 100%;">
-            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
                 <p class="text">Precio</p>
                 <div class="text" id="precio" style="margin: 8px;"></div>
             </div>
 
-            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
                 <p class="text">Cantidad Kg</p>
-                <div class="text" id="cantidadContainer" style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
+                <div class="text" id="cantidadContainer"
+                    style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
             </div>
 
-            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 4px;">
                 <p class="text">Cantidad</p>
-                <div class="text" id="btnContainer" style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
+                <div class="text" id="btnContainer"
+                    style="display: flex; justify-content: center; align-items: center; margin: 8px;"></div>
             </div>
         </div>
     </div>
-
     <div style="width: 100%; height: 4px; background-color: black; border-radius: 24px; margin: 24px;"></div>
 
     <div class="Resumen">
@@ -56,20 +62,21 @@
             <h2 id="totalPrecio">Precio</h2>
         </div>
 
-        <div style="width: 90%;">
-            <p style="margin: 16px; font-weight: bold;">Método de pago</p>
+        <div style=" width: 90%;">
+            <p style="margin: 16px; font-weight: bold;">Meotodo de pago</p>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <select class="selectpago" name="" id="">
                     <option>Efectivo</option>
-                    <option>Transferencia</option>
-                    <option>Débito/Crédito</option>
+                    <option>Tranferencia</option>
+                    <option>Debito/Credito</option>
                 </select>
 
                 <button class="btnpago">Procesar Pago e imprimir recibo</button>
             </div>
+
         </div>
     </div>
-    <script src="faturacion.js"></script>
-    <script type="module" src="faturacion.js"></script>
+
 </body>
+<script type="module" src="faturacion.js"></script>
 </html>
