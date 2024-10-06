@@ -8,7 +8,6 @@ const precioContainer = document.getElementById('precio');
 const cantidadContainer = document.getElementById('cantidadContainer');
 const btnContainer = document.getElementById('btnContainer');
 
-// Función de búsqueda
 function buscarCarnes() {
     const query = searchInput.value.toLowerCase();
     const todasLasCarnes = [...carnesDeRes, ...carnesDePollo, ...carnesDeCerdo];
@@ -20,7 +19,6 @@ function buscarCarnes() {
     mostrarSugerencias(resultados);
 }
 
-// Mostrar sugerencias en la interfaz
 function mostrarSugerencias(resultados) {
     suggestionsContainer.innerHTML = ''; 
 
@@ -39,20 +37,17 @@ function mostrarSugerencias(resultados) {
     }
 }
 
-// Seleccionar la carne sugerida
 function seleccionarSugerencia(carne) {
     searchInput.value = carne.nombre; 
     suggestionsContainer.style.display = 'none'; 
     manejarAgregar(carne.nombre, 1, carne.precio); 
 }
 
-// Agregar a la lista de compras
 function manejarAgregar(nombre, cantidad, precio) {
     agregarElemento(nombre, cantidad, precio);
     mostrarListaCompra();
 }
 
-// Mostrar la lista de compras
 function mostrarListaCompra() {
     namesContainer.innerHTML = '';
     precioContainer.innerHTML = '';
@@ -111,7 +106,6 @@ function mostrarListaCompra() {
     document.getElementById('totalPrecio').textContent = `$${totalPrecio.toFixed(2)}`;
 }
 
-// Actualizar el precio total
 function actualizarTotal() {
     let total = 0;
     const listaElementos = obtenerListaCompra();
@@ -121,5 +115,4 @@ function actualizarTotal() {
     document.getElementById('totalPrecio').textContent = `$${total.toFixed(2)}`;
 }
 
-// Evento al buscar
 searchInput.addEventListener('input', buscarCarnes);
