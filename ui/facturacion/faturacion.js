@@ -1,5 +1,5 @@
-import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from '/data/fakebd.js';
-import { agregarElemento, eliminarElemento, obtenerListaCompra } from '/domain/listaCompraServide.js';
+import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from './data/fakebd.js'; // Ruta relativa
+import { agregarElemento, eliminarElemento, obtenerListaCompra } from './domain/listaCompraService.js'; // Ruta relativa
 
 const searchInput = document.getElementById('searchInput');
 const suggestionsContainer = document.getElementById('suggestions');
@@ -8,19 +8,19 @@ const precioContainer = document.getElementById('precio');
 const cantidadContainer = document.getElementById('cantidadContainer');
 const btnContainer = document.getElementById('btnContainer');
 
+// Función de búsqueda
 function buscarCarnes() {
     const query = searchInput.value.toLowerCase();
-    let resultados = [];
-
     const todasLasCarnes = [...carnesDeRes, ...carnesDePollo, ...carnesDeCerdo];
-
-    resultados = todasLasCarnes.filter(carne => {
+    
+    const resultados = todasLasCarnes.filter(carne => {
         return carne.id.toString().includes(query) || carne.nombre.toLowerCase().includes(query);
     });
 
     mostrarSugerencias(resultados);
 }
 
+// Mostrar sugerencias en la interfaz
 function mostrarSugerencias(resultados) {
     suggestionsContainer.innerHTML = ''; 
 
@@ -39,25 +39,20 @@ function mostrarSugerencias(resultados) {
     }
 }
 
+// Seleccionar la carne sugerida
 function seleccionarSugerencia(carne) {
     searchInput.value = carne.nombre; 
     suggestionsContainer.style.display = 'none'; 
     manejarAgregar(carne.nombre, 1, carne.precio); 
 }
 
-document.addEventListener('click', (event) => {
-    if (!event.target.closest('.container')) {
-        suggestionsContainer.style.display = 'none'; 
-    }
-});
-
-searchInput.addEventListener('input', buscarCarnes);
-
+// Agregar a la lista de compras
 function manejarAgregar(nombre, cantidad, precio) {
     agregarElemento(nombre, cantidad, precio);
     mostrarListaCompra();
 }
 
+// Mostrar la lista de compras
 function mostrarListaCompra() {
     namesContainer.innerHTML = '';
     precioContainer.innerHTML = '';
@@ -67,16 +62,15 @@ function mostrarListaCompra() {
     const listaElementos = obtenerListaCompra();
     let totalPrecio = 0; 
 
-    listaElementos.forEach((elemento, index) => { // Agregar index como argumento
+    listaElementos.forEach((elemento, index) => {
         const nameElement = document.createElement('div');
         nameElement.textContent = elemento.nombre;
         nameElement.style.margin = '8px'; 
 
         const precioElement = document.createElement('div');
-        precioElement.textContent = elemento.precio;
+        precioElement.textContent = `$${elemento.precio}`;
         precioElement.style.margin = '8px';  
 
-        // Crear el input de cantidad
         const cantidadElement = document.createElement('div');
         cantidadElement.style.display = 'flex';
         cantidadElement.style.justifyContent = 'center';
@@ -90,58 +84,42 @@ function mostrarListaCompra() {
         cantidadInput.style.margin = '0 12px';  
         cantidadInput.value = '1';  
 
-        // Calcular el total cuando cambie la cantidad
         cantidadInput.addEventListener('input', () => {
-            const cantidad = parseFloat(cantidadInput.value) || 1; // Manejar valor no numérico
+            const cantidad = parseFloat(cantidadInput.value) || 1;
             const precioTotal = parseFloat(elemento.precio) * cantidad;
-            precioElement.textContent = `$${precioTotal.toFixed(2)}`; // Mostrar el precio total
-
-            // Actualizar el total general
-            totalPrecio = calcularTotal(listaElementos); // Función para calcular el total
-            const totalElement = document.getElementById('totalPrecio');
-            totalElement.textContent = `Total: $${totalPrecio.toFixed(2)}`;
-        });
-
-        const btnElement = document.createElement('div');
-        btnElement.style.display = 'flex';
-        btnElement.style.justifyContent = 'center';
-        btnElement.style.alignItems = 'center';
-        btnElement.style.margin = '8px';  
-        
-        const btn = document.createElement('button');
-        btn.className = 'btnEliminar'; 
-        btn.textContent = "Eliminar";
-        btn.style.margin = '0 8px';  
-        
-        // Agregar evento de eliminación
-        btn.addEventListener('click', () => {
-            eliminarElemento(index); // Llamar a la función de eliminación
-            mostrarListaCompra(); // Volver a mostrar la lista de compra actualizada
+            precioElement.textContent = `$${precioTotal.toFixed(2)}`;
+            actualizarTotal();
         });
 
         cantidadElement.appendChild(cantidadInput);
-        btnElement.appendChild(btn);
+        cantidadContainer.appendChild(cantidadElement);
 
         namesContainer.appendChild(nameElement);
-        btnContainer.appendChild(btnElement);
         precioContainer.appendChild(precioElement);
-        cantidadContainer.appendChild(cantidadElement);
+        totalPrecio += parseFloat(elemento.precio); 
+
+        const btnEliminar = document.createElement('button');
+        btnEliminar.className = 'btn';
+        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.onclick = () => {
+            eliminarElemento(index); 
+            mostrarListaCompra(); 
+        };
+        btnContainer.appendChild(btnEliminar);
     });
 
-    // Calcular el total inicial
-    totalPrecio = calcularTotal(listaElementos);
-    const totalElement = document.getElementById('totalPrecio');
-    totalElement.textContent = `Total: $${totalPrecio.toFixed(2)}`;
-    totalElement.style.fontWeight = 'bold'; 
+    document.getElementById('totalPrecio').textContent = `$${totalPrecio.toFixed(2)}`;
 }
 
-// Función para calcular el total
-function calcularTotal(listaElementos) {
-    return listaElementos.reduce((total, elemento) => {
-        const cantidadInput = document.querySelector(`input.cantidad`);
-        const cantidad = parseFloat(cantidadInput.value) || 1; // Manejar valor no numérico
-        return total + (parseFloat(elemento.precio) * cantidad);
-    }, 0);
+// Actualizar el precio total
+function actualizarTotal() {
+    let total = 0;
+    const listaElementos = obtenerListaCompra();
+    listaElementos.forEach(elemento => {
+        total += parseFloat(elemento.precio);
+    });
+    document.getElementById('totalPrecio').textContent = `$${total.toFixed(2)}`;
 }
 
-
+// Evento al buscar
+searchInput.addEventListener('input', buscarCarnes);
