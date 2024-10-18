@@ -2,6 +2,8 @@ body {
 }
 
 section {
+  display: flex;
+  flex-wrap: wrap;
     color: white;
   box-sizing: border-box;
   display: inline-flex;
@@ -12,8 +14,8 @@ section {
 
 .rpt {
   box-sizing: border-box;
-  width: 500px;
-  height: 250px;
+  width: 570px;
+  height: 270px;
   border-radius: 30px;
   background: #ac2020;
   box-shadow: inset 25px 25px 90px #450d0d, inset -25px -25px 90px #ff3333;

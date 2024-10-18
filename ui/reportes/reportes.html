@@ -6,26 +6,31 @@
     <title>Reportes</title>
 
     <link rel="stylesheet" href="reportes.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   </head>
   <body>
     <main>
       <section>
-        <div class="rpt">
-          <h1
-            style="
-              display: flex;
-              box-sizing: border-box;
-              padding-left: 50px;
-              padding-top: 10px;
-            "
-          >
-            Ventas por Producto
-          </h1>
+       
 
-          <p style="display: flex; box-sizing: border-box; padding-left: 20px">
-            Gráfico de barras mostrando las ventas por producto.
-          </p>
-        </div>
+
+        <div class="rpt">
+          <h1   style="
+          display: flex;
+          box-sizing: border-box;
+          padding-left:20px;
+        ">Ventas por Producto</h1>
+          <p style="box-sizing: border-box; padding-left: 15%;" >Gráfico de barras mostrando las ventas por producto.</p>
+          <div id="chartContainer">
+              <canvas id="ventasChart"></canvas>
+          </div>
+      </div>
+
+
+
+
+
 
         <div class="ddv">
           <h1
@@ -60,6 +65,104 @@
             Gráfico de líneas mostrando las ventas mensuales del año.
           </p>
         </div>
+
+
+
+    
+        
+    
+        <script>
+            // Base de datos falsa de productos de carnicería
+            const productosCarniceria = [
+                { nombre: "Bistec de res", ventas: 120, precio: 15.99 },
+                { nombre: "Chuletas de cerdo", ventas: 85, precio: 12.50 },
+                { nombre: "Pollo entero", ventas: 95, precio: 8.99 },
+                { nombre: "Costillas de res", ventas: 60, precio: 18.75 },
+                { nombre: "Chorizo", ventas: 150, precio: 9.99 },
+                { nombre: "Lomo de cerdo", ventas: 70, precio: 14.50 },
+                { nombre: "Pechuga de pollo", ventas: 110, precio: 11.25 },
+                { nombre: "Carne molida", ventas: 130, precio: 10.99 },
+            ];
+    
+            // Función para crear el gráfico
+            function crearGrafico() {
+                const ctx = document.getElementById('ventasChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: productosCarniceria.map(producto => producto.nombre),
+                        datasets: [{
+                            label: 'Ventas',
+                            data: productosCarniceria.map(producto => producto.ventas),
+                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                            borderColor: 'rgba(255, 255, 255, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Cantidad de Ventas',
+                                    color: 'white'
+                                },
+                                ticks: {
+                                    color: 'white'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Productos',
+                                    color: 'white'
+                                },
+                                ticks: {
+                                    color: 'white'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.x !== null) {
+                                            label += context.parsed.x + ' unidades';
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+    
+            // Ejecutar la función cuando el DOM esté completamente cargado
+            document.addEventListener('DOMContentLoaded', crearGrafico);
+        </script>
+
+ 
+
+
+
+
+
+
       </section>
     </main>
   </body>
