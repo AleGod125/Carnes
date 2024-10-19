@@ -379,7 +379,44 @@ const ventas = [
     { nombre: "Capón", tipo: "Res", precio: 34000, pesoKg: 4.0, fechaVenta: "21/10/2024" },
     { nombre: "Ribeye", tipo: "Res", precio: 40000, pesoKg: 4.1, fechaVenta: "28/10/2024" }
 ];
+const proveedores = [
+    {
+        nombre: "Carnes Frescas S.A.",
+        contacto: "Juan Pérez", 
+        telefono: "555-1234",
+        email: "contacto@carnesfrescas.com",
+        direccion: "Av. Principal 123, Ciudad"
+    },
+    {
+        nombre: "Cárnicas El Buen Sabor",
+        contacto: "María López", 
+        telefono: "555-5678",
+        email: "ventas@buenasabores.com",
+        direccion: "Calle Secundaria 456, Ciudad"
+    },
+    {
+        nombre: "Carnes Premium",
+        contacto: "Carlos Martínez", 
+        telefono: "555-8765",
+        email: "info@carnespremium.com",
+        direccion: "Av. Comercio 789, Ciudad"
+    },
+    {
+        nombre: "Cárnico del Norte",
+        contacto: "Ana Torres", 
+        telefono: "555-4321",
+        email: "contacto@carnicosdelnorte.com",
+        direccion: "Calle Industrial 321, Ciudad"
+    },
+    {
+        nombre: "El Mercado de Carnes",
+        contacto: "Luis García", 
+        telefono: "555-2468",
+        email: "info@granmercadocarnes.com",
+        direccion: "Av. Comercio 654, Ciudad"
+    }
+];
 
 export default productosCarnes;
-export { carnesDeRes,carnesDePollo,carnesDeCerdo,listaCompra };
+export { carnesDeRes,carnesDePollo,carnesDeCerdo,listaCompra, proveedores };
 export { ventas };
