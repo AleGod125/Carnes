@@ -78,7 +78,6 @@ function generarDivsVentasDestallado() {
     const contenedor = document.getElementById('contenedorVentasDestallado'); 
     const detallesVentas = obtenerDetallesVentasMesActual();
 
-    contenedor.innerHTML = '';
 
     detallesVentas.forEach(venta => {
         const div = document.createElement('div');
