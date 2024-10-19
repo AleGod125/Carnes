@@ -1,0 +1,87 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.continer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cardRepoter {
+    border-radius: 8px;
+    border: 1px solid white;
+    margin: 16px;
+    padding: 12px;
+    width: 46%;
+    min-height: 430px;
+}
+
+.Containerbar{
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Containerbar:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerLable{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px;
+    font-weight: bold;
+}
+
+progress {
+    width: 90%;   
+    height: 10px;        
+    border-radius: 10px;   
+    overflow: hidden;
+    background-color: #5a1717;  
+}
+
+progress::-webkit-progress-bar {
+    background-color: #5a1717; 
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #18181b;   
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #18181b;   
+    border-radius: 10px;
+}
+
+
+.ventas{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    padding: 4px;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    color: #71717a;
+}
+
+.ventas:hover{
+    background-color: rgba(255, 255, 255, 0.192);
+}

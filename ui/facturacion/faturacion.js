@@ -1,5 +1,5 @@
 import productosCarnes, { carnesDeRes, carnesDePollo, carnesDeCerdo } from '/data/fakebd.js'; // Ruta relativa
-import { agregarElemento, eliminarElemento, obtenerListaCompra } from '/domain/listaCompraServide.js'; // Ruta relativa
+import { agregarElemento, eliminarElemento, obtenerListaCompra } from '/domain/listaCompraServide.js'; 
 
 const searchInput = document.getElementById('searchInput');
 const suggestionsContainer = document.getElementById('suggestions');

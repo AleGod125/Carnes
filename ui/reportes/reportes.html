@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reportes.css" />
+  <link rel="stylesheet" href="reportes2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carnes</title>
 
-    <link rel="stylesheet" href="reportes.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   </head>
   <body>
-    <main>
+    <main style="display: none;">
       <section>
        
 
@@ -165,5 +165,65 @@
 
       </section>
     </main>
+
+    <div class="continer">
+      <div class="cardRepoter">
+        <h1>Ventas por Productos</h1>
+        
+        <div id="contenedorVentasDestallado" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+        <div class="ventas">
+          <p style="margin-left: 16px;">Producto</p>
+          <P >Ventas</P>
+          <P style="margin-right: 20%;">Ingresos</P>
+        </div>
+      </div>
+      </div>
+
+      <div class="cardRepoter">
+        <h1>Distribución de Ventas</h1>
+    
+        <div class="Containerbar" id="ContainerRes">
+            <div class="ContainerLable">
+                <p>Carne de Res</p>
+                <p id="porcentajeRes">/p> 
+            </div>
+            <progress class="progress" max="100" id="progressRes" value="30"></progress>
+        </div>
+    
+        <div class="Containerbar" id="ContainerPollo">
+            <div class="ContainerLable">
+                <p>Carne de Pollo</p>
+                <p id="porcentajePollo"></p>
+            </div>
+            <progress class="progress" max="100" id="progressPollo" value="30"></progress>
+        </div>
+    
+        <div class="Containerbar" id="ContainerCerdo">
+            <div class="ContainerLable">
+                <p>Carne de Cerdo</p>
+                <p id="porcentajeCerdo"></p> 
+            </div>
+            <progress class="progress" max="100" id="progressCerdo" value="30"></progress>
+        </div>
+    </div>
+    
+
+      <div class="cardRepoter">
+        <h1>Ventas Mensuales</h1>
+        <div id="contenedorVentas" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+
+          <div class="ventas">
+            <p style="margin-left: 16px;">Mes</p>
+            <P style="margin-right: 40%;">Ventas</P>
+          </div>
+
+        
+      </div>
+
+    </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="reportes.js"></script>
 </html>
